@@ -49,7 +49,7 @@ for function in constraints:
 
         plt.close('all')
 
-        plt.contour(X, Y, Z, levels=levels, linewidths=[0.3])
+        plt.contour(X, Y, Z, levels=levels, linewidths=[0.5])
 
         for alg_name in algorithms:
 
@@ -63,7 +63,7 @@ for function in constraints:
             y = points[:, 1]
             z = np.array(best_fit["function_values"])
 
-            plt.plot(x, y, label=alg_name, linewidth=0.6)
+            plt.plot(x, y, label=alg_name, linewidth=1)
 
         plt.title(function_names[function])
 

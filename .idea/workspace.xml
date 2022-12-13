@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56f47aa6-f599-4e00-adee-7993aae5429c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build_main_latex_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex/footer.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex/header.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Solvers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Solvers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ackley.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/ackley.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/beale.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/beale.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/booth.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/booth.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/matyas.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/matyas.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/rastrigin2d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/rastrigin2d.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/rosenbrock2d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/rosenbrock2d.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isolines.py" beforeDir="false" afterPath="$PROJECT_DIR$/isolines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/ackley_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/ackley_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/ackley_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/ackley_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/beale_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/beale_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/beale_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/beale_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/booth_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/booth_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/booth_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/booth_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/matyas_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/matyas_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/matyas_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/matyas_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rastrigin2d_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rastrigin2d_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rastrigin2d_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rastrigin2d_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rastrigin30d_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rastrigin30d_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rastrigin30d_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rastrigin30d_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rastrigin4d_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rastrigin4d_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rastrigin4d_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rastrigin4d_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rosenbrock2d_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rosenbrock2d_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rosenbrock2d_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rosenbrock2d_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rosenbrock30d_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rosenbrock30d_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rosenbrock30d_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rosenbrock30d_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rosenbrock4d_best_fits.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rosenbrock4d_best_fits.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/rosenbrock4d_function_values.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex/rosenbrock4d_function_values.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latextablemaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/latextablemaker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports.py" beforeDir="false" afterPath="$PROJECT_DIR$/reports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/reports.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IoREGyDu81DGRbag8dPpyDGFCq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ciccr-estagiario/computational_work_01&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/latex" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56f47aa6-f599-4e00-adee-7993aae5429c" name="Changes" comment="" />
+      <created>1670845835983</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670845835983</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

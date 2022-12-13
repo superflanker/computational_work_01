@@ -77,3 +77,8 @@ algorithms = {"dfp": dfp,
               "bfgs": bfgs,
               "lbfgs": lbfgs,
               "lma": lma}
+
+algorithms_names = {"dfp": "DFP",
+                    "bfgs": "BFGS",
+                    "lbfgs": "LBFGS",
+                    "lma": "LMA"}

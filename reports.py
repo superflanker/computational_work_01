@@ -137,6 +137,12 @@ for function in constraints:
 
             data = extract_data(old_data)
 
+            # convergence_class
+            results[function][alg_name][search_space]['good']['runs'] = len(data['good']['data'])
+            results[function][alg_name][search_space]['poor']['runs'] = len(data['poor']['data'])
+            results[function][alg_name][search_space]['divergence']['runs'] = len(data['divergence']['data'])
+            results[function][alg_name][search_space]['overall']['runs'] = len(old_data['runs']['data'])
+
             #: time elapsed
             results[function][alg_name][search_space]['good']['elapsed_time'] = min_max_avg_std(
                 data['good']['elapsed_time'])

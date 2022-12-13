@@ -37,15 +37,43 @@ for function in constraints:
 
     best_fits = []
 
-    column_names = ["Algorithm", "Minimal", "Maximum", "Mean", "Median"]
+    column_names = ["Alg.", "Min", "Max", "Mean", "Median"]
 
-    best_fits_column_names = ["Algorithm", "Solution", "Iterations", "Function Evaluations", "Function Value"]
+    best_fits_column_names = ["Alg.", "Sol.", "Iter.", "F. Eval", "F. Value"]
+
+    solutions_rows = ['$x_{%s}$' % x for x in range(1, defs['dimension']+1)]
+
+    solution_names = list()
+
+    solution_names.append("Coord.")
+
+    solutions = list()
+
+    solutions.append(solutions_rows)
+
+    convergence = list()
+
+    convergence_names = ["Alg.", "Good", "Poor", "Diver.", "Total"]
+
+    index = 1
 
     for alg_name in algorithms:
+
+        good = data[function][alg_name]["design_space"]["good"]['runs']
+
+        poor = data[function][alg_name]["design_space"]["poor"]['runs']
+
+        divergence = data[function][alg_name]["design_space"]["divergence"]['runs']
+
+        overall = data[function][alg_name]["design_space"]["overall"]['runs']
+
+        convergence.append([alg_name, good, poor, divergence, overall])
 
         function_values_data = data[function][alg_name]["design_space"]["overall"]["function_values"]
 
         best_fit_data = data[function][alg_name]["design_space"]["best_fit"]["best_fit_data"]
+
+        solutions.append(best_fit_data["optimal_point"])
 
         function_values.append([alg_name,
                                 function_values_data["fmin"],
@@ -54,25 +82,62 @@ for function in constraints:
                                 function_values_data["fmedian"]])
 
         best_fits.append([alg_name,
-                          ",".join([str(x) for x in best_fit_data["optimal_point"]]),
+                          '$S_{%s}$' % index,
                           best_fit_data["iterations"],
                           best_fit_data["function_evaluations"],
                           best_fit_data["optimal_function_value"]])
 
-    # function_data = np.array(function_values)
+        solution_names.append('$S_{%s}$' % index)
 
-    df = pd.DataFrame(function_values, columns=column_names)
+        index += 1
 
-    content = df.to_latex(index=False)
+    solutions = list(map(list, zip(*solutions)))
+
+    df = pd.DataFrame(function_values,
+                      columns=column_names)
+
+    content = df.to_latex(index=False,
+                          float_format="%.2f",
+                          escape=False,
+                          label="function_values:{:s}".format(function),
+                          caption="Statistical Information about function values For {:s}".format(function_names[function]))
 
     with open("latex/" + function + "_function_values.tex", "w") as f:
         f.write(content)
 
-    # best_fit_data = np.array(best_fits)
+    df = pd.DataFrame(best_fits,
+                      columns=best_fits_column_names)
 
-    df = pd.DataFrame(best_fits, columns=best_fits_column_names)
-
-    content = df.to_latex(index=False)
+    content = df.to_latex(index=False,
+                          float_format="%.2f",
+                          escape=False,
+                          label="solutions:{:s}".format(function),
+                          caption="Best Fits For {:s}".format(function_names[function]))
 
     with open("latex/" + function + "_best_fits.tex", "w") as f:
         f.write(content)
+
+    df = pd.DataFrame(solutions,
+                      columns=solution_names)
+
+    content = df.to_latex(index=False,
+                          float_format="%.2f",
+                          escape=False,
+                          label="detailedsolutions:{:s}".format(function),
+                          caption="Detailed Solutions For {:s}".format(function_names[function]))
+
+    with open("latex/" + function + "_best_solutions.tex", "w") as f:
+        f.write(content)
+
+    df = pd.DataFrame(convergence,
+                      columns=convergence_names)
+
+    content = df.to_latex(index=False,
+                          float_format="%.2f",
+                          escape=False,
+                          label="convergence:{:s}".format(function),
+                          caption="Convergence Report For {:s}".format(function_names[function]))
+
+    with open("latex/" + function + "_convergence.tex", "w") as f:
+        f.write(content)
+

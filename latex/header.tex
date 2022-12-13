@@ -1,0 +1,43 @@
+\documentclass{ieeeaccess}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+\history{Unpublished, First Preview}
+\doi{Unpublished/NoDOIInformation}
+\title{Quasi-Newton Methods Comparision using Ackley, Beale, Booth, Matyas, Rastrigin and RosenBrock Functions}
+\author{
+	\IEEEauthorblockN{Augusto Mathias Adams\IEEEauthorrefmark{1}}
+    \IEEEauthorblockN{Caio Phillipe Mizerkowski\IEEEauthorrefmark{2}}
+    \IEEEauthorblockN{Christian Piltz Araújo\IEEEauthorrefmark{3}}
+    \IEEEauthorblockN{Vinicius Eduardo dos Reis\IEEEauthorrefmark{4}}
+	\IEEEauthorblockA{\IEEEauthorrefmark{1}GRR20172143, augusto.adams@ufpr.br}
+	\IEEEauthorblockA{\IEEEauthorrefmark{2}GRR20166403, caiomizerkowski@gmail.com}
+	\IEEEauthorblockA{\IEEEauthorrefmark{3}GRR20172197, christian0294@yahoo.com.br}
+	\IEEEauthorblockA{\IEEEauthorrefmark{4}GRR20175957, eduardo.reis02@gmail.com}
+}
+
+\markboth
+{Adams \headeretal: Quasi-Newton Methods Comparision using Ackley, Beale, Booth, Matyas, Rastrigin and RosenBrock Functions}
+{Adams \headeretal: Quasi-Newton Methods Comparision using Ackley, Beale, Booth, Matyas, Rastrigin and RosenBrock Functions}
+
+\corresp{Corresponding author: Augusto Mathias Adams (e-mail: augusto.adams@ufpr.br).}
+\begin{abstract}
+This paper discusses briefly four popular algorithms to solve optimization/minimization problems, beloginging to Quasi-Newton class: \textit{Davidon–Fletcher–Powell} (DFP), \textit{Broyden–Fletcher–Goldfarb–Shanno} (BFGS), limited memory BFGS and \textit{Levenberg-Marquardt Algorithm} (LMA). These algorithms are implemented in \textit{Python language}, version 3.10 and uses \textit{SymPy}, \textit{SciPy} and \textit{NumPy} libraries. One of them, \textit{BFGS}, is implemented natively on the  \textit{SciPy} library and the rest are implemented by hand to provide useful insights about the inner operation of the algorithms. The results are, however, very surprising with a few exceptions: when the initial solution is placed in a region near the global minimum, almost all algorithms converges very quickly, so, a study was made to limit the initial solution to  these regions. With exception of 
+\end{abstract}
+
+\begin{keywords} 
+Optimization Methods, Quasi-Newton, Non-linear Programming
+\end{keywords}
+
+\titlepgskip=-15pt
+
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
