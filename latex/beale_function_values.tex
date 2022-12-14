@@ -1,4 +1,6 @@
-\begin{table}
+The minimal. maximal, mean and median values of the solutions are shown in Table~\ref{function_values:beale}:
+
+\begin{table}[H]
 \centering
 \caption{Statistical Information about function values For Beale Function}
 \label{function_values:beale}
@@ -13,3 +15,10 @@ lbfgs & 0.00 &  7.31 &  0.36 &    0.00 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+LMA again had the worst performance. It is the only algorithm that, altiugh has some solutions in
+poor convergence, that has a median greater than zero. LBFGS and DFP seems quite radical in terms
+of convergence, while having a median of zero its mean values are greater than zero an its maximal
+value are noticeable. The larger mean value of LMA reinforces the notion of divergence in this case
+and signifies that the algorithm don't fit very well for BEale Fnction minimum.
+

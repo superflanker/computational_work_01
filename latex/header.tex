@@ -1,43 +1,75 @@
-\documentclass{ieeeaccess}
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
+\usepackage{mathtools}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{microtype}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs,makecell,tabularx}
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
 \usepackage{booktabs}
+\restylefloat{table}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
-\history{Unpublished, First Preview}
-\doi{Unpublished/NoDOIInformation}
 \title{Quasi-Newton Methods Comparision using Ackley, Beale, Booth, Matyas, Rastrigin and RosenBrock Functions}
 \author{
-	\IEEEauthorblockN{Augusto Mathias Adams\IEEEauthorrefmark{1}}
-    \IEEEauthorblockN{Caio Phillipe Mizerkowski\IEEEauthorrefmark{2}}
-    \IEEEauthorblockN{Christian Piltz Araújo\IEEEauthorrefmark{3}}
-    \IEEEauthorblockN{Vinicius Eduardo dos Reis\IEEEauthorrefmark{4}}
-	\IEEEauthorblockA{\IEEEauthorrefmark{1}GRR20172143, augusto.adams@ufpr.br}
-	\IEEEauthorblockA{\IEEEauthorrefmark{2}GRR20166403, caiomizerkowski@gmail.com}
-	\IEEEauthorblockA{\IEEEauthorrefmark{3}GRR20172197, christian0294@yahoo.com.br}
-	\IEEEauthorblockA{\IEEEauthorrefmark{4}GRR20175957, eduardo.reis02@gmail.com}
+	\IEEEauthorblockN{Augusto Mathias Adams\IEEEauthorrefmark{1}, Caio Phillipe Mizerkowski\IEEEauthorrefmark{2}, Christian Piltz Araújo\IEEEauthorrefmark{3} and Vinicius Eduardo dos Reis\IEEEauthorrefmark{4}}\\
+	\IEEEauthorblockA{\IEEEauthorrefmark{1}GRR20172143, augusto.adams@ufpr.br, \IEEEauthorrefmark{2}GRR20166403, caiomizerkowski@gmail.com,\\ \IEEEauthorrefmark{3}GRR20172197, christian0294@yahoo.com.br, \IEEEauthorrefmark{4}GRR20175957, eduardo.reis02@gmail.com}
 }
-
-\markboth
-{Adams \headeretal: Quasi-Newton Methods Comparision using Ackley, Beale, Booth, Matyas, Rastrigin and RosenBrock Functions}
-{Adams \headeretal: Quasi-Newton Methods Comparision using Ackley, Beale, Booth, Matyas, Rastrigin and RosenBrock Functions}
-
-\corresp{Corresponding author: Augusto Mathias Adams (e-mail: augusto.adams@ufpr.br).}
-\begin{abstract}
-This paper discusses briefly four popular algorithms to solve optimization/minimization problems, beloginging to Quasi-Newton class: \textit{Davidon–Fletcher–Powell} (DFP), \textit{Broyden–Fletcher–Goldfarb–Shanno} (BFGS), limited memory BFGS and \textit{Levenberg-Marquardt Algorithm} (LMA). These algorithms are implemented in \textit{Python language}, version 3.10 and uses \textit{SymPy}, \textit{SciPy} and \textit{NumPy} libraries. One of them, \textit{BFGS}, is implemented natively on the  \textit{SciPy} library and the rest are implemented by hand to provide useful insights about the inner operation of the algorithms. The results are, however, very surprising with a few exceptions: when the initial solution is placed in a region near the global minimum, almost all algorithms converges very quickly, so, a study was made to limit the initial solution to  these regions. With exception of 
-\end{abstract}
-
-\begin{keywords} 
-Optimization Methods, Quasi-Newton, Non-linear Programming
-\end{keywords}
-
-\titlepgskip=-15pt
 
 \maketitle
 
+
+\begin{abstract}
+	This paper discusses briefly four popular algorithms to solve optimization/minimization problems, beloginging to Quasi-Newton class: \textit{Davidon–Fletcher–Powell} (DFP), \textit{Broyden–Fletcher–Goldfarb–Shanno} (BFGS), \textit{limited memory BFGS} and \textit{Levenberg-Marquardt Algorithm} (LMA). These algorithms are implemented in \textit{Python language}, version 3.10 and uses \textit{SymPy}, \textit{SciPy} and \textit{NumPy} libraries. One of them, \textit{BFGS}, is implemented natively on the  \textit{SciPy} library and the rest are implemented by hand to provide useful insights about the inner operation of the algorithms. The results are, however, very surprising with a few exceptions: when the initial solution is placed in a region near the global minimum, almost all algorithms converges very quickly and the convergence becomes unpredictable when the initial solution is placed randomly in the search space.
+\end{abstract}
+
+\begin{IEEEkeywords}
+	Optimization Methods, Quasi-Newton, Second Order Optimization,  Non-linear Programming
+\end{IEEEkeywords}
+
 \section{Introduction}
 \label{sec:introduction}
+
+Quasi-Newton methods are methods used to find zeros or local maxima and minima of functions, as a viable alternative to Newton's method. They are generally used if the Jacobian or Hessian is not available or is too expensive to compute at each iteration. Strictly speaking, Newton's method requires the Jacobian to look for zeros, or the Hessian to find extrema, while quasi-Newton methods estimate the Jacobian or Hessian to perform such tasks.
+
+In this paper, three popular alternatives of true \textit{Quasi-Newton} methods are evaluated to find function minima: \textit{Davidon–Fletcher–Powell} (DFP), \textit{Broyden–Fletcher–Goldfarb–Shanno} (BFGS) and \textit{limited memory BFGS} (LBFGS). The fourth method, the \textit{Levenberg-Marquardt Algorithm} (LMA) is a hybrid method that makes use of a weighting procedure between the steepest descent algorithm and Newton's method to obtain advantages from both methods.
+
+The four methods were implemented using the Python language, based on the SciPy, NumPy and SimPy packages. The SciPy package already contains standard procedures for numerical optimization and uses the NumPy package for its internal operations. The SymPy package is used to assemble the test functions and is very convenient for differentiation of functions. The LBGFS, DFP and LMA methods, although they have native versions within the SciPy package, were implemented manually following SciPy conventions because the native versions do not support data collection of iterations and/or expect different parameters from the original proposal, such as LMA. The description of the manually implemented algorithms can be seen in the book Engineering Optimization by Singiresu Rao, Fifth Edition, except for LBFGS. The LBFGS algorithm was taken from GitHUB, in the url https://github.com/qkolj/L-BFGS/blob/master/L-BFGS.ipynb.
+
+All algorithms were tested using the following parameters:
+
+\begin{itemize}
+	\item \textit{Number of initial Solutions:} 100
+	\item \textit{Máximum Iterations:} 4000
+	\item \textit{Tolerance (Convergence Criterion): } $1 \times 10^{-9}$
+\end{itemize}
+
+The initial solutions of all function were taken near the global minimum to avoid wrong convergence to a local minimum, since these algorithms don't differentiate a local minimum from a global minimum. It is assumed that the global minimum is a \textit{strong global minimum}, that is, a unique minimal point. For LMA, it is assumed that the initial step is fixed and does not take in consideration any information about the function/problem. All algorithms are unsconstrained and, while the initial solution is probably near the optimal solution, there's much room for divergence.
+
+The algorithms were evaluated using the folowing criteria:
+
+\begin{itemize}
+	\item \textit{Convergence: } the convergence of an algorithm is classified as good, por and divergence.
+	\subitem \textit{Good convergence: } the final solution is really near the optimal solution within the max iterations;
+	\subitem \textit{Poor convergence: } the final solution is far from the optimal solution for any reason;
+	\subitem \textit{Divergence: }  the final solution is out of the funtion's search space;
+	\item \textit{Statistical Parameters about the solutions:} Mean and Median of the solutions are analysed to provide insights about the algorithms;
+	\item Iterations to converge, function evaluations and function values.
+\end{itemize}

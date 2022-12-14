@@ -40,36 +40,22 @@ for function in constraints:
     content[
         defs['dimension']] += "\subsubsection{Convergence Analysis}\n\label{" + "convergence" + functionString + "}\n\n"
 
-    content[defs['dimension']] += "\nIntroductory text goes here...\n"
-
     with open("latex/" + function + "_convergence.tex", "r") as f:
         content[defs['dimension']] += f.read() + "\n"
-
-    content[defs['dimension']] += "\nComments goes here...\n"
 
     content[defs[
         'dimension']] += "\subsubsection{Statistical Analysis of The Solutions}\n\label{" + "statisticalanalysis" + functionString + "}\n\n"
 
-    content[defs['dimension']] += "\nIntroductory text goes here...\n"
-
     with open("latex/" + function + "_function_values.tex", "r") as f:
         content[defs['dimension']] += f.read() + "\n"
 
-    content[defs['dimension']] += "\nComments goes here...\n"
-
     content[defs['dimension']] += "\subsubsection{Best Fits}\n\label{" + "bestfits" + functionString + "}\n\n"
-
-    content[defs['dimension']] += "\nIntroductory text goes here...\n"
 
     with open("latex/" + function + "_best_fits.tex", "r") as f:
         content[defs['dimension']] += f.read() + "\n"
 
-    content[defs['dimension']] += "\nComments goes here...\n"
-
     with open("latex/" + function + "_best_solutions.tex", "r") as f:
         content[defs['dimension']] += f.read() + "\n"
-
-    content[defs['dimension']] += "\nComments goes here...\n"
 
     if defs['dimension'] == 2:
         # isolines
@@ -77,17 +63,13 @@ for function in constraints:
         content[defs[
             'dimension']] += "\subsubsection{Isolines and Convergence line}\n\label{" + "isolines" + functionString + "}\n\n"
 
-        content[defs['dimension']] += "\nIntroductory text goes here...\n"
-
-        content[defs['dimension']] += """\\begin{figure}[h]
+        content[defs['dimension']] += """\\begin{figure}[H]
 \\centering
-\\includegraphics[scale=0.5]{images/""" + function + """.jpg}
 \\caption{Isolines and convergence line for """ + functionName + """}
 \\label{fig:""" + function + """}
+\\includegraphics[scale=0.5]{images/""" + function + """.jpg}
 \\end{figure}
 """
-
-        content[defs['dimension']] += "\nComments goes here...\n"
 
 with open(header_file, "r") as f:
     header = f.read()
