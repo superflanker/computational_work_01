@@ -1,2 +1,19 @@
 
+\section{Discussion}
+
+The main objective of this work is demonstrate the inner work of a optimization class of algorithms called \textit{Quasi-Newton algorithms}. Four of them are presented, along with the results and analysis regarding convergence, function evaluations and function objective values.
+
+For implementation, it was decided to put constraints on search space, because for the original search space of some functions, like Ackley and Rastrigin, there are other minimas that will confuse every algorithm tested for this paper, and there is no sense on test a local minima procedure on these conditions. To restrain the initial solution to some region in the search space was a cheap and ready solution to avoid the algorithms to stop because of stumbling upon the wrong minimum.
+
+
+The \textit{Levenberg-Marquardt Algorithm} implemented for this paper is very sensitive to hyperparameters, namely $\alpha$ and $\lambda$, which was not tunned to every function, so, the conspicuous performance variation is noticeable along the results. LMA is known to be fast and reliable, but in our implementation it was found a little tricky to get the hyperparameters right for all the test functions. But for Rosenbrock and Rastrigin, it is the best option, even for lame implementations like ours.
+
+The \textit{Broyden–Fletcher–Goldfarb–Shanno} Algorithm was the only one that we decided to use it as is from \textit{SciPy}, because it has features desired for this work, like counting of function evaluations, gradient evaluation and iterations. It performed very well for Ackley and Booth Functions, and reasonably well for other functions.
+
+The \textit{Davidon–Fletcher–Powell} Algorithm is not implemented in \textit{SciPy} but its equations shows that it is the dual of BFGS, so, it was easy to implement using some \textit{SciPy} code for BFGS algorithm. In the DFP procedure, there is a Hessian inversion to be evaluated every iteration, then, numerical imprecision would be taken into consideration evaluating its results. While in some cases it has a superb performance (Like Ackley Function), it has very poor performance in Rosenbrock Function and even in Beale Function. The increase of dimensions makes DFP suffer of numerical imprecision due to the Hessian inversion, except for Rastrigin, and it is the loser algorithm in other functions.
+
+Finally, the \textit{Limited memory BFGS} has an average performance among the functions. The original algorithm was implemented using code found in the url https://github.com/qkolj/L-BFGS/blob/master/L-BFGS.ipynb.
+
+In fact there are no algorithm that solves satisfactory the minima problem for an arbitrary function. Form the standpoint of performance and convergence, all the algorithms have an average performance and a reasonable convergence, although we have to restrain the search space to a small area near the optimal solution.
+
 \end{document}

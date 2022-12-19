@@ -22,7 +22,6 @@
 \usepackage{float}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{booktabs}
 \restylefloat{table}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -51,7 +50,7 @@ Quasi-Newton methods are methods used to find zeros or local maxima and minima o
 
 In this paper, three popular alternatives of true \textit{Quasi-Newton} methods are evaluated to find function minima: \textit{Davidon–Fletcher–Powell} (DFP), \textit{Broyden–Fletcher–Goldfarb–Shanno} (BFGS) and \textit{limited memory BFGS} (LBFGS). The fourth method, the \textit{Levenberg-Marquardt Algorithm} (LMA) is a hybrid method that makes use of a weighting procedure between the steepest descent algorithm and Newton's method to obtain advantages from both methods.
 
-The four methods were implemented using the Python language, based on the SciPy, NumPy and SimPy packages. The SciPy package already contains standard procedures for numerical optimization and uses the NumPy package for its internal operations. The SymPy package is used to assemble the test functions and is very convenient for differentiation of functions. The LBGFS, DFP and LMA methods, although they have native versions within the SciPy package, were implemented manually following SciPy conventions because the native versions do not support data collection of iterations and/or expect different parameters from the original proposal, such as LMA. The description of the manually implemented algorithms can be seen in the book Engineering Optimization by Singiresu Rao, Fifth Edition, except for LBFGS. The LBFGS algorithm was taken from GitHUB, in the url https://github.com/qkolj/L-BFGS/blob/master/L-BFGS.ipynb.
+The four methods were implemented using the Python language, based on the SciPy, NumPy and SymPy packages. The SciPy package already contains standard procedures for numerical optimization and uses the NumPy package for its internal operations. The SymPy package is used to assemble the test functions and is a very convenient way for differentiation of functions. The LBGFS, DFP and LMA methods, although they have native versions within the SciPy package, were implemented manually following SciPy conventions because the native versions do not support data collection of iterations and/or expect different parameters from the original proposal, such as LMA. The description of the manually implemented algorithms can be seen in the book Engineering Optimization by Singiresu Rao, Fifth Edition, except for LBFGS. The LBFGS algorithm was taken from GitHUB, in the url https://github.com/qkolj/L-BFGS/blob/master/L-BFGS.ipynb.
 
 All algorithms were tested using the following parameters:
 

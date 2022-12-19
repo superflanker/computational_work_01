@@ -653,12 +653,6 @@ def fmin_dfp(f, x0, fprime=None, args=(), gtol=1e-5, norm=Inf,
             return res['x']
 
 
-"""
-Reference: H. B. Nielsen, “Damping parameter in Marquardt’s method”. Report IMM-REP-
-1999-05, Technical University of Denmark, Lyngby, Dinamarca, 2005
-"""
-
-
 def _minimize_dfp(fun, x0, args=(), jac=None, callback=None,
                   gtol=1e-5, norm=Inf, eps=_epsilon, maxiter=None,
                   disp=False, return_all=False, finite_diff_rel_step=None,

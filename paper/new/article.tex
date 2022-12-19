@@ -50,7 +50,7 @@ Quasi-Newton methods are methods used to find zeros or local maxima and minima o
 
 In this paper, three popular alternatives of true \textit{Quasi-Newton} methods are evaluated to find function minima: \textit{Davidon–Fletcher–Powell} (DFP), \textit{Broyden–Fletcher–Goldfarb–Shanno} (BFGS) and \textit{limited memory BFGS} (LBFGS). The fourth method, the \textit{Levenberg-Marquardt Algorithm} (LMA) is a hybrid method that makes use of a weighting procedure between the steepest descent algorithm and Newton's method to obtain advantages from both methods.
 
-The four methods were implemented using the Python language, based on the SciPy, NumPy and SimPy packages. The SciPy package already contains standard procedures for numerical optimization and uses the NumPy package for its internal operations. The SymPy package is used to assemble the test functions and is very convenient for differentiation of functions. The LBGFS, DFP and LMA methods, although they have native versions within the SciPy package, were implemented manually following SciPy conventions because the native versions do not support data collection of iterations and/or expect different parameters from the original proposal, such as LMA. The description of the manually implemented algorithms can be seen in the book Engineering Optimization by Singiresu Rao, Fifth Edition, except for LBFGS. The LBFGS algorithm was taken from GitHUB, in the url https://github.com/qkolj/L-BFGS/blob/master/L-BFGS.ipynb.
+The four methods were implemented using the Python language, based on the SciPy, NumPy and SymPy packages. The SciPy package already contains standard procedures for numerical optimization and uses the NumPy package for its internal operations. The SymPy package is used to assemble the test functions and is a very convenient way for differentiation of functions. The LBGFS, DFP and LMA methods, although they have native versions within the SciPy package, were implemented manually following SciPy conventions because the native versions do not support data collection of iterations and/or expect different parameters from the original proposal, such as LMA. The description of the manually implemented algorithms can be seen in the book Engineering Optimization by Singiresu Rao, Fifth Edition, except for LBFGS. The LBFGS algorithm was taken from GitHUB, in the url https://github.com/qkolj/L-BFGS/blob/master/L-BFGS.ipynb.
 
 All algorithms were tested using the following parameters:
 
@@ -72,7 +72,6 @@ The algorithms were evaluated using the folowing criteria:
 	\item \textit{Statistical Parameters about the solutions:} Mean and Median of the solutions are analysed to provide insights about the algorithms;
 	\item Iterations to converge, function evaluations and function values.
 \end{itemize}
-
 \section{2D Function versions}
 \label{functions2D}
 
@@ -1296,5 +1295,22 @@ The optimal point of Rosenbrock function in 30 dimensions is correctly pointed t
 shows the same solution to all algorithms, because the values are so small and were rounded to fit on the Table. The differences of
 the optimal point are of order $10^{-14}$ to $10^{-22}$, for the LMA, DFP, LBFGS and BFGS algorithms, respectively.
 
+
+\section{Discussion}
+
+The main objective of this work is demonstrate the inner work of a optimization class of algorithms called \textit{Quasi-Newton algorithms}. Four of them are presented, along with the results and analysis regarding convergence, function evaluations and function objective values.
+
+For implementation, it was decided to put constraints on search space, because for the original search space of some functions, like Ackley and Rastrigin, there are other minimas that will confuse every algorithm tested for this paper, and there is no sense on test a local minima procedure on these conditions. To restrain the initial solution to some region in the search space was a cheap and ready solution to avoid the algorithms to stop because of stumbling upon the wrong minimum.
+
+
+The \textit{Levenberg-Marquardt Algorithm} implemented for this paper is very sensitive to hyperparameters, namely $\alpha$ and $\lambda$, which was not tunned to every function, so, the conspicuous performance variation is noticeable along the results. LMA is known to be fast and reliable, but in our implementation it was found a little tricky to get the hyperparameters right for all the test functions. But for Rosenbrock and Rastrigin, it is the best option, even for lame implementations like ours.
+
+The \textit{Broyden–Fletcher–Goldfarb–Shanno} Algorithm was the only one that we decided to use it as is from \textit{SciPy}, because it has features desired for this work, like counting of function evaluations, gradient evaluation and iterations. It performed very well for Ackley and Booth Functions, and reasonably well for other functions.
+
+The \textit{Davidon–Fletcher–Powell} Algorithm is not implemented in \textit{SciPy} but its equations shows that it is the dual of BFGS, so, it was easy to implement using some \textit{SciPy} code for BFGS algorithm. In the DFP procedure, there is a Hessian inversion to be evaluated every iteration, then, numerical imprecision would be taken into consideration evaluating its results. While in some cases it has a superb performance (Like Ackley Function), it has very poor performance in Rosenbrock Function and even in Beale Function. The increase of dimensions makes DFP suffer of numerical imprecision due to the Hessian inversion, except for Rastrigin, and it is the loser algorithm in other functions.
+
+Finally, the \textit{Limited memory BFGS} has an average performance among the functions. The original algorithm was implemented using code found in the url https://github.com/qkolj/L-BFGS/blob/master/L-BFGS.ipynb.
+
+In fact there are no algorithm that solves satisfactory the minima problem for an arbitrary function. Form the standpoint of performance and convergence, all the algorithms have an average performance and a reasonable convergence, although we have to restrain the search space to a small area near the optimal solution.
 
 \end{document}
