@@ -93,6 +93,7 @@ def generate_random_sequence(seed, lmin, lmax, n):
 Objective function, gradient and hessian analytical and estimation procedures
 """
 
+
 def evaluate_objective_function(f, xvec, stats):
     """
     Function Evaluation
@@ -136,4 +137,3 @@ def compute_hessian(hessF, x, stats):
         stats['hessian_function_calls'] = 0
     stats['hessian_function_calls'] += 1
     return np.array(hessF(*x))
-

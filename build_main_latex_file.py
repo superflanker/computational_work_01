@@ -14,6 +14,19 @@ header_file = "latex/header.tex"
 
 footer_file = "latex/footer.tex"
 
+image_comments = {'ackley': ["The isolines of Ackley Function and convergence lines for all algorithms "
+                             "are shown in Figure~\\ref{fig:ackley}:",
+                            "The isolines for Ackley Function shows that there are at least 4 pitfalls"
+                            " near ther optimal solution, so, the search space needs to be reduced to "
+                            "\$[-0.05, 0.05]\$ to avoid wrong convergence. All the algorithms converges "
+                            "quite smoothly following a straight line"],
+                  "beale": ["The isolines of Beale Function and convergence lines for all algorithms "
+                             "are shown i Figure~\\ref{fig:beale}:",
+                            "The isolines for Beale Function shows that there are a large plateau near "
+                            "the solution. For an unknown reason the best algorithm had 80\% of performance"
+                            " at its best. Quasi-Newton algorithms suffers to converge when the gradient is"
+                            " less significant."]}
+
 content = dict()
 
 content[2] = "\section{2D Function versions}\n\label{functions2D}\n\n"
@@ -63,6 +76,12 @@ for function in constraints:
         content[defs[
             'dimension']] += "\subsubsection{Isolines and Convergence line}\n\label{" + "isolines" + functionString + "}\n\n"
 
+        if function in image_comments:
+            content[defs[
+                'dimension']] += image_comments[function][0]
+
+
+
         content[defs['dimension']] += """\\begin{figure}[H]
 \\centering
 \\caption{Isolines and convergence line for """ + functionName + """}
@@ -70,6 +89,10 @@ for function in constraints:
 \\includegraphics[scale=0.5]{images/""" + function + """.jpg}
 \\end{figure}
 """
+
+        if function in image_comments:
+            content[defs[
+                'dimension']] += image_comments[function][1]
 
 with open(header_file, "r") as f:
     header = f.read()

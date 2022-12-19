@@ -192,13 +192,13 @@ for the LMA, DFP, LBFGS and BFGS algorithms, respectively.
 \subsubsection{Isolines and Convergence line}
 \label{isolinesackley2D}
 
-\begin{figure}[H]
+The isolines of Ackley Function and convergence lines for all algorithms are shown in Figure~\ref{fig:ackley}:\begin{figure}[H]
 \centering
 \caption{Isolines and convergence line for Ackley Function}
 \label{fig:ackley}
 \includegraphics[scale=0.5]{images/ackley.jpg}
 \end{figure}
-\subsection{Beale Function}
+The isolines for Ackley Function shows that there are at least 4 pitfalls near ther optimal solution, so, the search space needs to be reduced to \$[-0.05, 0.05]\$ to avoid wrong convergence. All the algorithms converges quite smoothly following a straight line\subsection{Beale Function}
 \label{beale2D}
 
 \subsubsection{Convergence Analysis}
@@ -279,7 +279,7 @@ lbfgs & $S_{3}$ &     14 &       50 &      0.00 \\
 \end{tabular}
 \end{table}
 
-The Ackley function has a very large search space around the optimal solution and
+The Beale function has a very large search space around the optimal solution and
 it had a reasonable number of iterations for each algorithm. The DFP method, superseeded by BFGS,
 is surprisingly rapid to find the solution. The LMA, known to be fast, had a reasonable performance.
 BFGS/LBFGS performed as expected.
@@ -315,13 +315,13 @@ these values are of order $10^{-13}$ os less.
 \subsubsection{Isolines and Convergence line}
 \label{isolinesbeale2D}
 
-\begin{figure}[H]
+The isolines of Beale Function and convergence lines for all algorithms are shown i Figure~\ref{fig:beale}:\begin{figure}[H]
 \centering
 \caption{Isolines and convergence line for Beale Function}
 \label{fig:beale}
 \includegraphics[scale=0.5]{images/beale.jpg}
 \end{figure}
-\subsection{Booth Function}
+The isolines for Beale Function shows that there are a large plateau near the solution. For an unknown reason the best algorithm had 80\% of performance at its best. Quasi-Newton algorithms suffers to converge when the gradient is less significant.\subsection{Booth Function}
 \label{booth2D}
 
 \subsubsection{Convergence Analysis}
@@ -365,6 +365,8 @@ lbfgs & 0.00 & 0.00 &  0.00 &    0.00 \\
 \subsubsection{Best Fits}
 \label{bestfitsbooth2D}
 
+The best solutions of all algorithms for Booth Function, obtained using the minimal
+distance of the solution, are shown in Table~\ref{solutions:booth}:
 \begin{table}[H]
 \centering
 \caption{Best Fits For Booth Function}
@@ -380,6 +382,11 @@ lbfgs & $S_{3}$ &      5 &       21 &      0.00 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+
+
+Altough the column F. Value points to the the same value, this is a rounded value
+and the real values are os order $10^{-22} \approx 10^{-14}$.
 
 \begin{table}[H]
 \centering
