@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.27)  14 DEC 2022 16:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.30)  19 DEC 2022 11:37
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **article.tex
 (./article.tex
@@ -550,7 +550,7 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 Package: babel 2022/01/26 3.70 The Babel package
 \babel@savecnt=\count313
 \U@D=\dimen286
-\l@unhyphenated=\language8
+\l@unhyphenated=\language87
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
@@ -558,16 +558,12 @@ Package: babel 2022/01/26 3.70 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'british' set to \l@english
-(babel)             (\language0). Reported on input line 82.
-Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
-(babel)             (\language0). Reported on input line 83.
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@english
-(babel)             (\language0). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@english
-(babel)             (\language0). Reported on input line 108.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language12). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language12). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -587,34 +583,34 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 (./article.aux)
 \openout1 = `article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 -- Lines per column: 56 (exact).
-LaTeX Info: Redefining \microtypecontext on input line 29.
-Package microtype Info: Applying patch `item' on input line 29.
-Package microtype Info: Applying patch `toc' on input line 29.
-Package microtype Info: Applying patch `eqnum' on input line 29.
-Package microtype Info: Applying patch `footnote' on input line 29.
+LaTeX Info: Redefining \microtypecontext on input line 28.
+Package microtype Info: Applying patch `item' on input line 28.
+Package microtype Info: Applying patch `toc' on input line 28.
+Package microtype Info: Applying patch `eqnum' on input line 28.
+Package microtype Info: Applying patch `footnote' on input line 28.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 29.
+LaTeX Info: Redefining \showhyphens on input line 28.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -677,9 +673,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 36.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 35.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 36.
+ 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -689,19 +685,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 36.
+ 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 36.
+ 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 36.
+ 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
@@ -713,32 +709,32 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.14006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 35.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 35.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 35.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 35.
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 []\T1/ptm/m/n/10 (+20) In this pa-per, three pop-u-lar al-ter-na-tives of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 \T1/ptm/m/n/10 (+20) true \T1/ptm/m/it/10 (+20) Quasi-Newton \T1/ptm/m/n/10 (+2
 0) meth-ods are eval-u-ated to find
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 \T1/ptm/m/n/10 (+20) func-tion min-ima: \T1/ptm/m/it/10 (+20) Davi-don^^UFletch
 er^^UPowell \T1/ptm/m/n/10 (+20) (DFP),
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 52--53
+Underfull \hbox (badness 3428) in paragraph at lines 51--52
 \T1/ptm/m/it/10 (+20) Broy-den^^UFletcher^^UGoldfarb^^UShanno \T1/ptm/m/n/10 (+
 20) (BFGS) and \T1/ptm/m/it/10 (+20) lim-ited
  []
@@ -750,43 +746,50 @@ Underfull \hbox (badness 3428) in paragraph at lines 52--53
 <images/ackley.jpg, id=11, 462.528pt x 346.896pt>
 File: images/ackley.jpg Graphic file (type jpg)
 <use images/ackley.jpg>
-Package pdftex.def Info: images/ackley.jpg  used on input line 199.
+Package pdftex.def Info: images/ackley.jpg  used on input line 202.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
  [2 <./images/ackley.jpg>]
 <images/beale.jpg, id=17, 462.528pt x 346.896pt>
 File: images/beale.jpg Graphic file (type jpg)
 <use images/beale.jpg>
-Package pdftex.def Info: images/beale.jpg  used on input line 322.
+Package pdftex.def Info: images/beale.jpg  used on input line 330.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
  [3 <./images/beale.jpg>]
 <images/booth.jpg, id=21, 462.528pt x 346.896pt>
 File: images/booth.jpg Graphic file (type jpg)
 <use images/booth.jpg>
-Package pdftex.def Info: images/booth.jpg  used on input line 412.
+Package pdftex.def Info: images/booth.jpg  used on input line 444.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
-
-Underfull \vbox (badness 2310) has occurred while \output is active []
-
-<images/matyas.jpg, id=22, 462.528pt x 346.896pt>
+ [4 <./images/booth.jpg>]
+<images/matyas.jpg, id=25, 462.528pt x 346.896pt>
 File: images/matyas.jpg Graphic file (type jpg)
 <use images/matyas.jpg>
-Package pdftex.def Info: images/matyas.jpg  used on input line 495.
+Package pdftex.def Info: images/matyas.jpg  used on input line 559.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
- [4 <./images/booth.jpg> <./images/matyas.jpg>]
+
+
+LaTeX Warning: Reference `isolinesrastrigin2D' on page 5 undefined on input lin
+e 590.
+
 <images/rastrigin2d.jpg, id=26, 462.528pt x 346.896pt>
 File: images/rastrigin2d.jpg Graphic file (type jpg)
 <use images/rastrigin2d.jpg>
-Package pdftex.def Info: images/rastrigin2d.jpg  used on input line 578.
+Package pdftex.def Info: images/rastrigin2d.jpg  used on input line 677.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+[5 <./images/matyas.jpg>]
 
-Underfull \vbox (badness 5359) has occurred while \output is active []
+LaTeX Warning: Reference `isolinesrosenbrock2D' on page 6 undefined on input li
+ne 707.
 
-<images/rosenbrock2d.jpg, id=27, 462.528pt x 346.896pt>
+<images/rosenbrock2d.jpg, id=30, 462.528pt x 346.896pt>
 File: images/rosenbrock2d.jpg Graphic file (type jpg)
 <use images/rosenbrock2d.jpg>
-Package pdftex.def Info: images/rosenbrock2d.jpg  used on input line 661.
+Package pdftex.def Info: images/rosenbrock2d.jpg  used on input line 797.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
- [5 <./images/rastrigin2d.jpg> <./images/rosenbrock2d.jpg>] [6]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./images/rastrigin2d.jpg>] [7 <./images/rosenbrock2d.jpg>] [8] [9]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -798,27 +801,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (./article.aux) ) 
+[10
+
+] (./article.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 11368 strings out of 480154
- 189361 string characters out of 5893787
- 554135 words of memory out of 5000000
- 28831 multiletter control sequences out of 15000+600000
- 610958 words of font info for 360 fonts, out of 8000000 for 9000
- 61 hyphenation exceptions out of 8191
+ 11395 strings out of 478287
+ 189615 string characters out of 5849288
+ 555883 words of memory out of 5000000
+ 29071 multiletter control sequences out of 15000+600000
+ 612128 words of font info for 378 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
  84i,14n,90p,1004b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on article.pdf (7 pages, 9632906 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on article.pdf (10 pages, 9650269 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  77855 words of extra memory for PDF output out of 89155 (max. 10000000)
 

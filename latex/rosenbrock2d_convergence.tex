@@ -1,3 +1,6 @@
+
+The convergence report for the Rosenbrock Function in 30 dimensions is shown in Table~\ref{convergence:rosenbrock2d}:
+
 \begin{table}[H]
 \centering
 \caption{Convergence Report For Rosenbrock Function}
@@ -13,3 +16,11 @@ lbfgs &   100 &     0 &       0 &    100 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Except for DFP, Rosenbrock has good convergence for any algorithm for a constrained search space
+of $\left[-1.5, 1.5\right]$. Although the Rosenbrock Function has only the global minimum in a
+search space of $\left[-10, 10\right]$, it has a large banana shaped plateau near the optimal
+solution, as it is shown in Section~\ref{isolinesrosenbrock2D}. The search space constraint serves
+only to limit the number of iterations of each algorithm. The large search space tends to make the algorithm
+walks too much to find the solution and tends to exceed the maximum iterations defined in the evaluation
+criteria shown in Section~\ref{sec:introduction}.

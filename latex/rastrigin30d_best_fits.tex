@@ -1,3 +1,7 @@
+
+The best solutions of all algorithms for Rastrigin Function, obtained using the minimal
+distance of the solution, are shown in Table~\ref{solutions:rastrigin30d}:
+
 \begin{table}[H]
 \centering
 \caption{Best Fits For Rastrigin Function}
@@ -13,3 +17,10 @@ lbfgs & $S_{3}$ &      6 &      135 &      0.00 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+LMA is the less expensive algorithm to solve Rastrigin in 30 dimensions, while LBFGS
+is the most expensive of all. Although it has one more iteration than LMA, it evaluates
+the objective function twice than BFGS, the second most expensive algorithm.
+
+Although the column F. Value points to the the same value, this is a rounded value
+and the real values are os order $10^{-22} \approx 10^{-14}$.

@@ -17,15 +17,38 @@ footer_file = "latex/footer.tex"
 image_comments = {'ackley': ["The isolines of Ackley Function and convergence lines for all algorithms "
                              "are shown in Figure~\\ref{fig:ackley}:",
                             "The isolines for Ackley Function shows that there are at least 4 pitfalls"
-                            " near ther optimal solution, so, the search space needs to be reduced to "
-                            "\$[-0.05, 0.05]\$ to avoid wrong convergence. All the algorithms converges "
+                            " near the optimal solution, so, the search space needs to be reduced to "
+                            "$[-0.05, 0.05]$ to avoid wrong convergence. All the algorithms converges "
                             "quite smoothly following a straight line"],
                   "beale": ["The isolines of Beale Function and convergence lines for all algorithms "
                              "are shown i Figure~\\ref{fig:beale}:",
                             "The isolines for Beale Function shows that there are a large plateau near "
-                            "the solution. For an unknown reason the best algorithm had 80\% of performance"
+                            "the solution. For this reason we believe that the best algorithm had 80\% of performance"
                             " at its best. Quasi-Newton algorithms suffers to converge when the gradient is"
-                            " less significant."]}
+                            " less significant."],
+                  "booth": ["The isolines of Booth Function and convergence lines for all algorithms "
+                            "are shown i Figure~\\ref{fig:booth}:",
+                            "The Figure~\\ref{fig:booth} shows that Booth Function has a well defined "
+                            "valley near $[1, 3]$. "],
+                  "matyas": ["The isolines of Matyas Function and convergence lines for all algorithms "
+                             "are shown i Figure~\\ref{fig:matyas}:",
+                             "The Figure~\\ref{fig:matyas} shows that Matyas Function has a well defined "
+                            "valley near $[0, 0]$. "],
+                  "rastrigin2d": ["The isolines of Rastrigin Function for 2 dimensions and "
+                                  "convergence lines for all algorithms "
+                                  "are shown in Figure~\\ref{fig:rastrigin2d}:",
+                                   "The isolines for Rastrigin Function shows that there are at least 2 pitfalls"
+                                   " near the optimal solution, so, the search space needs to be reduced to "
+                                   "$[-0.15, 0.15]$ to avoid wrong convergence. All the algorithms, except BFGS, converges "
+                                   "quite smoothly following a straight line"],
+                  "rosenbrock2d": ["The isolines of Rosenbrock Function for 2 dimensions "
+                                   "and convergence lines for all algorithms "
+                                   "are shown in Figure~\\ref{fig:rosenbrock2d}:",
+                                    "The isolines for Rosenbrock Function shows an interesting behaviour "
+                                   " near the optimal solution: the banana shape seems to force all algorithms "
+                                    "to choose $x_{2}$ axis to solve first, and then solve for $x_{1}$ axis. The $x_{2}$ axis "
+                                    "has probably the most significant derivative for an arbitrary point, so, when the algorithm "
+                                    "walks around for solution, it first find the valley and then walks around the valley to find its minumum"]}
 
 content = dict()
 

@@ -1,3 +1,6 @@
+
+The convergence report for the Rosenbrock Function in 30 dimensions is shown in Table~\ref{convergence:rosenbrock30d}:
+
 \begin{table}[H]
 \centering
 \caption{Convergence Report For Rosenbrock Function}
@@ -13,3 +16,9 @@ lbfgs &    95 &     5 &       0 &    100 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+DFP has poor convergence properties for the Rosenbrock Function with more than 2 dimensions.
+The rest have quite the same profile regarding convergence. It is important to note that
+although all algorithms does not converge for the presented initial solutions, it does not
+diverge at all. Because of the stop criterion of all algorithms, which is the function gradient value,
+and the banana shaped valley (plateau) that Rosenbrock function has, we have this behaviour.
