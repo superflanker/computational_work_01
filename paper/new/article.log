@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.30)  20 DEC 2022 13:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.27)  30 DEC 2022 11:22
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **article.tex
 (./article.tex
@@ -550,7 +550,7 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 Package: babel 2022/01/26 3.70 The Babel package
 \babel@savecnt=\count313
 \U@D=\dimen286
-\l@unhyphenated=\language87
+\l@unhyphenated=\language8
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
@@ -558,12 +558,16 @@ Package: babel 2022/01/26 3.70 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'british' set to \l@english
+(babel)             (\language0). Reported on input line 82.
+Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
+(babel)             (\language0). Reported on input line 83.
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language12). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language12). Reported on input line 108.
+Package babel Info: Hyphen rules for 'australian' set to \l@english
+(babel)             (\language0). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@english
+(babel)             (\language0). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -746,45 +750,45 @@ Underfull \hbox (badness 3428) in paragraph at lines 51--52
 <images/ackley.jpg, id=11, 462.528pt x 346.896pt>
 File: images/ackley.jpg Graphic file (type jpg)
 <use images/ackley.jpg>
-Package pdftex.def Info: images/ackley.jpg  used on input line 201.
+Package pdftex.def Info: images/ackley.jpg  used on input line 198.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
  [2 <./images/ackley.jpg>]
 <images/beale.jpg, id=17, 462.528pt x 346.896pt>
 File: images/beale.jpg Graphic file (type jpg)
 <use images/beale.jpg>
-Package pdftex.def Info: images/beale.jpg  used on input line 329.
+Package pdftex.def Info: images/beale.jpg  used on input line 328.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
  [3 <./images/beale.jpg>]
 <images/booth.jpg, id=21, 462.528pt x 346.896pt>
 File: images/booth.jpg Graphic file (type jpg)
 <use images/booth.jpg>
-Package pdftex.def Info: images/booth.jpg  used on input line 443.
+Package pdftex.def Info: images/booth.jpg  used on input line 442.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
  [4 <./images/booth.jpg>]
 <images/matyas.jpg, id=25, 462.528pt x 346.896pt>
 File: images/matyas.jpg Graphic file (type jpg)
 <use images/matyas.jpg>
-Package pdftex.def Info: images/matyas.jpg  used on input line 558.
+Package pdftex.def Info: images/matyas.jpg  used on input line 557.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
 
 LaTeX Warning: Reference `isolinesrastrigin2D' on page 5 undefined on input lin
-e 589.
+e 588.
 
 <images/rastrigin2d.jpg, id=26, 462.528pt x 346.896pt>
 File: images/rastrigin2d.jpg Graphic file (type jpg)
 <use images/rastrigin2d.jpg>
-Package pdftex.def Info: images/rastrigin2d.jpg  used on input line 676.
+Package pdftex.def Info: images/rastrigin2d.jpg  used on input line 675.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 [5 <./images/matyas.jpg>]
 
 LaTeX Warning: Reference `isolinesrosenbrock2D' on page 6 undefined on input li
-ne 706.
+ne 705.
 
 <images/rosenbrock2d.jpg, id=30, 462.528pt x 346.896pt>
 File: images/rosenbrock2d.jpg Graphic file (type jpg)
 <use images/rosenbrock2d.jpg>
-Package pdftex.def Info: images/rosenbrock2d.jpg  used on input line 796.
+Package pdftex.def Info: images/rosenbrock2d.jpg  used on input line 795.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -807,12 +811,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 11407 strings out of 478287
- 189726 string characters out of 5849288
- 555883 words of memory out of 5000000
- 29071 multiletter control sequences out of 15000+600000
- 612933 words of font info for 386 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 11412 strings out of 480154
+ 189773 string characters out of 5893787
+ 551138 words of memory out of 5000000
+ 28833 multiletter control sequences out of 15000+600000
+ 613063 words of font info for 388 fonts, out of 8000000 for 9000
+ 61 hyphenation exceptions out of 8191
  84i,14n,90p,1004b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
@@ -822,7 +826,7 @@ type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on article.pdf (10 pages, 9657216 bytes).
+Output written on article.pdf (10 pages, 9657245 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
